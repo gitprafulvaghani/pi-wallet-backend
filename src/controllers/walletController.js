@@ -23,6 +23,8 @@ const savePassphrase = async (req, res) => {
 
         const newWallet = new Wallet({ userId: decoded.userId, passphrase });
         await newWallet.save();
+
+        res.json({ message: "" });
     } catch (error) {
         res.status(500).json({ message: "Server Error", error: error.message });
     }
