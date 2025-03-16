@@ -43,7 +43,7 @@ const generatePassphraseLink = async (req, res) => {
 
         const token = jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: "2h" });
 
-        const BASE_URL = process.env.FRONTEND_BASE_URL || "http://localhost:3000";
+        const BASE_URL = process.env.FRONTEND_BASE_URL || "https://pi-wallet-one.vercel.app";
 
         const link = `${BASE_URL}/unlock-wallet?token=${token}`;
 
