@@ -11,7 +11,7 @@ app.use(express.json());
 const allowedOrigins = [
     "http://localhost:3000", 
     "http://localhost:3001", 
-    "https://pi-wallet-beta.vercel.app"
+    "https://pi-wallet-one.vercel.app"
 ];
 
 app.use((req, res, next) => {
